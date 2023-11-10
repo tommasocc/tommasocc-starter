@@ -1,0 +1,17 @@
+name: 'tommasocc Search'
+type: module
+core_version_requirement: '^9.4 || ^10'
+description: 'Provides basic Search API database configuration and Search view.'
+dependencies:
+  - 'drupal:field'
+  - 'drupal:layout_builder'
+  - 'drupal:node'
+  - 'drupal:taxonomy'
+  - 'drupal:user'
+  - 'drupal:views'
+  - 'search_api:search_api'
+  - 'search_api:search_api_db'
+  - 'tommasocc_announcements:tommasocc_announcements'
+  - 'tommasocc_homepage:tommasocc_homepage'
+version: 1.0.1
+package: tommasocc

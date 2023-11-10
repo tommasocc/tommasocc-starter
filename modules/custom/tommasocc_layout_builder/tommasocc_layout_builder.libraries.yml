@@ -1,0 +1,4 @@
+layouts:
+  css:
+    component:
+      css/layouts.css: {}

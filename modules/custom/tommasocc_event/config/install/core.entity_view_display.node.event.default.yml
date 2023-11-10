@@ -1,0 +1,369 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.event.field_event_date
+    - field.field.node.event.field_featured_media
+    - field.field.node.event.field_hero_image
+    - field.field.node.event.field_registration_link
+    - field.field.node.event.field_related_links
+    - field.field.node.event.field_related_links_heading
+    - field.field.node.event.field_summary
+    - field.field.node.event.layout_builder__layout
+    - node.type.event
+  module:
+    - layout_builder
+    - layout_builder_restrictions
+    - layout_discovery
+    - link
+    - smart_date
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: Hero
+          context_mapping: {  }
+        components:
+          66b3819c-fac4-435f-8688-7d3130eae73d:
+            uuid: 66b3819c-fac4-435f-8688-7d3130eae73d
+            region: content
+            configuration:
+              id: 'field_block:node:event:field_hero_image'
+              label: 'Hero Image'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_entity_view
+                label: hidden
+                settings:
+                  view_mode: default
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          f47990cb-8689-4977-b8fb-67b0ee670c45:
+            uuid: f47990cb-8689-4977-b8fb-67b0ee670c45
+            region: content
+            configuration:
+              id: 'field_block:node:event:field_event_date'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: smartdate_default
+                label: above
+                settings:
+                  timezone_override: ''
+                  format_type: medium
+                  format: default
+                  force_chronological: false
+                  add_classes: false
+                  time_wrapper: true
+                  localize: false
+                  parts:
+                    - start
+                    - end
+                  duration:
+                    separator: ' | '
+                    unit: ''
+                    decimals: 2
+                    suffix: h
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+        third_party_settings:
+          layout_builder_lock:
+            lock:
+              1: 1
+              2: 2
+              3: 3
+              4: 4
+              5: 5
+              6: 6
+              7: 7
+              8: 8
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: 'Featured Media'
+          context_mapping: {  }
+        components:
+          6b8e25d7-6695-4ca2-b3a3-7406a6e55137:
+            uuid: 6b8e25d7-6695-4ca2-b3a3-7406a6e55137
+            region: content
+            configuration:
+              id: 'field_block:node:event:field_featured_media'
+              label: 'Featured Media'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_entity_view
+                label: hidden
+                settings:
+                  view_mode: default
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+        third_party_settings:
+          layout_builder_lock:
+            lock:
+              1: 1
+              2: 2
+              3: 3
+              4: 4
+              5: 5
+              6: 6
+              7: 7
+              8: 8
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: 'Event Details'
+          context_mapping: {  }
+        components:
+          62d2e5ee-f8a9-4e3f-b26c-44c4b2619a4e:
+            uuid: 62d2e5ee-f8a9-4e3f-b26c-44c4b2619a4e
+            region: content
+            configuration:
+              id: 'field_block:node:event:title'
+              label: Title
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: hidden
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          c6c9a18c-e28f-41e8-87aa-df55a28776e7:
+            uuid: c6c9a18c-e28f-41e8-87aa-df55a28776e7
+            region: content
+            configuration:
+              id: 'field_block:node:event:field_registration_link'
+              label: 'Registration Link'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: link
+                label: hidden
+                settings:
+                  trim_length: null
+                  url_only: false
+                  url_plain: false
+                  rel: '0'
+                  target: _blank
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+        third_party_settings:
+          layout_builder_lock:
+            lock:
+              1: 1
+              2: 2
+              3: 3
+              4: 4
+              5: 5
+              6: 6
+              8: 8
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: 'Event Content'
+          context_mapping: {  }
+        components: {  }
+        third_party_settings:
+          layout_builder_lock:
+            lock: {  }
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: 'Event Metadata'
+          context_mapping: {  }
+        components:
+          7052c9f7-82be-4323-adc8-6ac02a8702df:
+            uuid: 7052c9f7-82be-4323-adc8-6ac02a8702df
+            region: content
+            configuration:
+              id: 'field_block:node:event:field_related_links_heading'
+              label: 'Related Links Heading'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: hidden
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          c665ad49-8aee-43da-941e-cd475e42d4f7:
+            uuid: c665ad49-8aee-43da-941e-cd475e42d4f7
+            region: content
+            configuration:
+              id: 'field_block:node:event:field_related_links'
+              label: 'Related Links'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: link
+                label: hidden
+                settings:
+                  trim_length: null
+                  url_only: false
+                  url_plain: false
+                  rel: '0'
+                  target: _blank
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+        third_party_settings:
+          layout_builder_lock:
+            lock:
+              1: 1
+              2: 2
+              3: 3
+              4: 4
+              5: 5
+              7: 7
+              8: 8
+  layout_builder_restrictions:
+    allowed_block_categories: {  }
+    entity_view_mode_restriction:
+      allowed_layouts:
+        - layout_onecol
+      denylisted_blocks: {  }
+      allowlisted_blocks:
+        'Inline blocks':
+          - 'inline_block:accordion'
+          - 'inline_block:button_group'
+          - 'inline_block:media_carousel'
+          - 'inline_block:media_gallery'
+          - 'inline_block:media'
+          - 'inline_block:text'
+      restricted_categories:
+        - 'Content fields'
+        - 'Custom block types'
+        - 'Custom blocks'
+        - Devel
+        - Forms
+        - 'Lists (Views)'
+        - Menus
+        - System
+        - User
+        - Webform
+        - core
+id: node.event.default
+targetEntityType: node
+bundle: event
+mode: default
+content:
+  field_event_date:
+    type: smartdate_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: medium
+      format: default
+      force_chronological: false
+      add_classes: false
+      time_wrapper: true
+      localize: false
+      parts:
+        - start
+        - end
+      duration:
+        separator: ' | '
+        unit: ''
+        decimals: 2
+        suffix: h
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_featured_media:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_hero_image:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_registration_link:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_related_links:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_related_links_heading:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_summary:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  layout_builder__layout: true
+  search_api_excerpt: true

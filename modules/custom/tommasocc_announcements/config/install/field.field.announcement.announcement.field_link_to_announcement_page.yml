@@ -1,0 +1,21 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.announcement.field_link_to_announcement_page
+  module:
+    - tommasocc_announcements
+id: announcement.announcement.field_link_to_announcement_page
+field_name: field_link_to_announcement_page
+entity_type: announcement
+bundle: announcement
+label: 'Link to Announcement Page'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'Yes'
+  off_label: 'No'
+field_type: boolean

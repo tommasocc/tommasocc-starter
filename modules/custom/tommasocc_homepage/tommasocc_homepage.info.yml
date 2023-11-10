@@ -1,0 +1,9 @@
+name: 'tommasocc Homepage'
+description: 'Provides and configures Homepage entity.'
+package: tommasocc
+type: module
+core_version_requirement: '^9.4 || ^10'
+dependencies:
+  - 'drupal:field'
+  - 'drupal:layout_builder'
+version: 1.0.1

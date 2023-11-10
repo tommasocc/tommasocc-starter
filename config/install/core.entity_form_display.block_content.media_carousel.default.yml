@@ -1,0 +1,44 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.media_carousel
+    - field.field.block_content.media_carousel.field_carousel_heading
+    - field.field.block_content.media_carousel.field_media_items
+  module:
+    - inline_entity_form
+id: block_content.media_carousel.default
+targetEntityType: block_content
+bundle: media_carousel
+mode: default
+content:
+  field_carousel_heading:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_media_items:
+    type: inline_entity_form_simple
+    weight: 2
+    region: content
+    settings:
+      form_mode: default
+      override_labels: false
+      label_singular: ''
+      label_plural: ''
+      collapsible: false
+      collapsed: false
+      revision: false
+    third_party_settings: {  }
+  info:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

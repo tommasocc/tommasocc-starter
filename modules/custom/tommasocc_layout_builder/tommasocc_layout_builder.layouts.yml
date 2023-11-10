@@ -1,0 +1,25 @@
+tommasocc_layout_builder_33_67:
+  label: 'Two Column - 33%/67%'
+  category: 'tommasocc'
+  library: tommasocc_layout_builder/layouts
+  regions:
+    column_1:
+      label: Column 1
+    column_2:
+      label: Column 2
+  default_region: column_1
+  icon_map:
+    - [column_1, column_2, column_2]
+
+tommasocc_layout_builder_67_33:
+  label: 'Two Column - 67%/33%'
+  category: 'tommasocc'
+  library: tommasocc_layout_builder/layouts
+  regions:
+    column_1:
+      label: Column 1
+    column_2:
+      label: Column 2
+  default_region: column_1
+  icon_map:
+    - [column_1, column_1, column_2]

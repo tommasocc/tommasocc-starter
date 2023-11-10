@@ -1,0 +1,23 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.announcement.field_announcement_body
+  module:
+    - text
+    - tommasocc_announcements
+id: announcement.announcement.field_announcement_body
+field_name: field_announcement_body
+entity_type: announcement
+bundle: announcement
+label: 'Announcement Body'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+  allowed_formats: {  }
+field_type: text_with_summary

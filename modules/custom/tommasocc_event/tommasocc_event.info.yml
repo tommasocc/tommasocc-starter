@@ -1,0 +1,21 @@
+name: 'tommasocc Event'
+description: 'Provides Event content type.'
+type: module
+core_version_requirement: ^10
+dependencies:
+  - 'drupal:field'
+  - 'drupal:layout_builder'
+  - 'drupal:layout_discovery'
+  - 'drupal:link'
+  - 'drupal:media_library'
+  - 'drupal:menu_ui'
+  - 'drupal:node'
+  - 'drupal:path'
+  - 'drupal:text'
+  - 'drupal:user'
+  - 'field_group:field_group'
+  - 'layout_builder_restrictions:layout_builder_restrictions'
+  - 'smart_date:smart_date'
+  - 'workflow_buttons:workflow_buttons'
+package: tommasocc
+version: 1.0.1

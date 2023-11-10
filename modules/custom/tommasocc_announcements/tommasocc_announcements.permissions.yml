@@ -1,0 +1,3 @@
+administer announcement:
+  title: 'Administer announcement settings'
+  restrict access: true

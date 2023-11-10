@@ -1,0 +1,22 @@
+{
+  "name": "tommasocc/tommasocc-starter",
+  "description": "Provides the tommasocc Starter Drupal installation profile, and supplemental custom modules.",
+  "type": "drupal-profile",
+  "license": "MIT",
+  "minimum-stability": "dev",
+  "homepage": "https://www.github.com/tommasocc/tommasocc-starter",
+  "authors": [
+    {
+      "name": "Tommaso Randazzo",
+      "homepage": "https://www.tommaso.cc/",
+      "role": "Maintainer"
+    }
+  ],
+  "require": {
+    "drupal/core": "^10"
+  },
+  "support": {
+    "issues": "https://www.github.com/tommasocc/tommasocc-starter/issues",
+    "source": "https://www.github.com/tommasocc/tommasocc-starter"
+  }
+}

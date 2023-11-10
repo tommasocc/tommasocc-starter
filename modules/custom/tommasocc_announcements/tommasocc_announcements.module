@@ -1,0 +1,84 @@
+<?php
+
+/**
+ * @file
+ * Provides an announcement entity type.
+ */
+
+use Drupal\Core\Render\Element;
+use Drupal\tommasocc_announcements\Entity\Announcement;
+use Drupal\user\UserInterface;
+
+/**
+ * Implements hook_theme().
+ */
+function tommasocc_announcements_theme() {
+  return [
+    'announcement' => [
+      'render element' => 'elements',
+    ],
+  ];
+}
+
+/**
+ * Prepares variables for announcement templates.
+ *
+ * Default template: announcement.html.twig.
+ *
+ * @param array $variables
+ *   An associative array containing:
+ *   - elements: An associative array containing the announcement information and any
+ *     fields attached to the entity.
+ *   - attributes: HTML attributes for the containing element.
+ */
+function template_preprocess_announcement(array &$variables) {
+  $variables['view_mode'] = $variables['elements']['#view_mode'];
+  foreach (Element::children($variables['elements']) as $key) {
+    $variables['content'][$key] = $variables['elements'][$key];
+  }
+}
+
+/**
+ * Implements hook_user_cancel().
+ */
+function tommasocc_announcements_user_cancel($edit, UserInterface $account, $method) {
+  switch ($method) {
+    case 'user_cancel_block_unpublish':
+      // Unpublish announcements.
+      $storage = \Drupal::entityTypeManager()->getStorage('announcement');
+      $announcement_ids = $storage->getQuery()
+        ->condition('uid', $account->id())
+        ->condition('status', 1)
+        ->execute();
+      foreach ($storage->loadMultiple($announcement_ids) as $announcement) {
+        $announcement->set('status', FALSE);
+        $announcement->save();
+      }
+      break;
+
+    case 'user_cancel_reassign':
+      // Anonymize announcements.
+      $storage = \Drupal::entityTypeManager()->getStorage('announcement');
+      $announcement_ids = $storage->getQuery()
+        ->condition('uid', $account->id())
+        ->execute();
+      foreach ($storage->loadMultiple($announcement_ids) as $announcement) {
+        $announcement->setOwnerId(0);
+        $announcement->save();
+      }
+      break;
+  }
+}
+
+/**
+ * Implements hook_ENTITY_TYPE_predelete() for user entities.
+ */
+function tommasocc_announcements_user_predelete(UserInterface $account) {
+  // Delete announcements.
+  $storage = \Drupal::entityTypeManager()->getStorage('announcement');
+  $announcement_ids = $storage->getQuery()
+    ->condition('uid', $account->id())
+    ->execute();
+  $announcements = $storage->loadMultiple($announcement_ids);
+  $storage->delete($announcements);
+}

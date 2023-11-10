@@ -1,0 +1,16 @@
+{
+  "folders": [
+    {
+      "name": "Root",
+      "path": "."
+    },
+    {
+      "name": "Config",
+      "path": "./config"
+    },
+    {
+      "name": "Modules",
+      "path": "./modules"
+    },
+  ]
+}

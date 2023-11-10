@@ -1,0 +1,4 @@
+entity.homepage.edit_form:
+  route_name: entity.homepage.edit_form
+  group: homepage
+  title: Edit

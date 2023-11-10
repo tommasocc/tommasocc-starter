@@ -1,0 +1,31 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.media_carousel
+    - field.field.block_content.media_carousel.field_carousel_heading
+    - field.field.block_content.media_carousel.field_media_items
+id: block_content.media_carousel.default
+targetEntityType: block_content
+bundle: media_carousel
+mode: default
+content:
+  field_carousel_heading:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_media_items:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  search_api_excerpt: true

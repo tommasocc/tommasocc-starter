@@ -1,0 +1,13 @@
+name: 'tommasocc Announcements'
+type: module
+description: 'Adds Announcement entity.'
+package: tommasocc
+core_version_requirement: '^9.4 || ^10'
+dependencies:
+  - 'drupal:field'
+  - 'drupal:link'
+  - 'drupal:text'
+  - 'drupal:user'
+  - 'drupal:views'
+  - 'field_group:field_group'
+version: 1.0.1

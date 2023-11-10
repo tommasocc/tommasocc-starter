@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - tommasocc_announcements
+id: announcement.search_result
+label: 'Search result highlighting input'
+targetEntityType: announcement
+cache: true

@@ -1,0 +1,28 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.accordion
+    - block_content.type.button_group
+    - field.storage.block_content.field_accordion_buttons
+id: block_content.accordion.field_accordion_buttons
+field_name: field_accordion_buttons
+entity_type: block_content
+bundle: accordion
+label: 'Accordion Buttons'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:block_content'
+  handler_settings:
+    target_bundles:
+      button_group: button_group
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

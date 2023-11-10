@@ -1,0 +1,34 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.button
+    - block_content.type.button_group
+    - block_content.type.checkerboard
+    - block_content.type.media
+    - block_content.type.text
+    - field.storage.block_content.field_content
+id: block_content.checkerboard.field_content
+field_name: field_content
+entity_type: block_content
+bundle: checkerboard
+label: Content
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:block_content'
+  handler_settings:
+    target_bundles:
+      button: button
+      button_group: button_group
+      media: media
+      text: text
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: button
+field_type: entity_reference

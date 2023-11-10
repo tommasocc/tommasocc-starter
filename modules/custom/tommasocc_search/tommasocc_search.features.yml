@@ -1,0 +1,11 @@
+bundle: tommasocc
+excluded:
+  - field.field.homepage.homepage.layout_builder__layout
+  - field.storage.homepage.layout_builder__layout
+  - core.entity_view_mode.announcement.search_result
+  - core.entity_view_mode.homepage.search_result
+  - core.entity_view_mode.node.search_result
+  - core.entity_view_mode.taxonomy_term.search_result
+  - search_api.settings
+  - search_api_db.settings
+required: true

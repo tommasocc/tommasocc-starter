@@ -1,0 +1,15 @@
+bundle: tommasocc
+excluded:
+  - olivero.settings
+  - core.entity_form_mode.media.media_library
+  - image.style.large
+  - image.style.medium
+  - image.style.thumbnail
+  - filter.format.webform_default
+  - views.view.media
+  - views.view.media_library
+  - core.entity_view_mode.media.media_library
+  - core.entity_view_mode.announcement.search_result
+  - taxonomy.vocabulary.article_tags
+  - node.type.article
+required: true

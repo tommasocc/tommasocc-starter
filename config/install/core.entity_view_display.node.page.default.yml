@@ -1,0 +1,102 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.page.field_hero_image
+    - field.field.node.page.field_summary
+    - field.field.node.page.layout_builder__layout
+    - node.type.page
+  module:
+    - layout_builder
+    - layout_builder_restrictions
+    - layout_discovery
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          258a5e77-202d-45cf-979e-f7eff2773daf:
+            uuid: 258a5e77-202d-45cf-979e-f7eff2773daf
+            region: content
+            configuration:
+              id: 'extra_field_block:node:page:links'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+            weight: 0
+            additional: {  }
+          4707c9fa-cc05-4d32-9c44-b89283d80b2a:
+            uuid: 4707c9fa-cc05-4d32-9c44-b89283d80b2a
+            region: content
+            configuration:
+              id: 'extra_field_block:node:page:content_moderation_control'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+            weight: 1
+            additional: {  }
+          23f54f06-f14a-45a5-b57d-043ae5d06cb9:
+            uuid: 23f54f06-f14a-45a5-b57d-043ae5d06cb9
+            region: content
+            configuration:
+              id: 'extra_field_block:node:page:workflow_buttons'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+            weight: 2
+            additional: {  }
+        third_party_settings: {  }
+  layout_builder_restrictions:
+    allowed_block_categories: {  }
+    entity_view_mode_restriction:
+      allowed_layouts: {  }
+      denylisted_blocks:
+        'Lists (Views)':
+          - 'views_block:content_recent-block_1'
+          - 'views_block:who_s_online-who_s_online_block'
+      allowlisted_blocks:
+        Menus:
+          - 'system_menu_block:main'
+        System:
+          - system_breadcrumb_block
+        core:
+          - page_title_block
+      restricted_categories:
+        - 'Content fields'
+        - 'Custom block types'
+        - 'Custom blocks'
+        - Devel
+        - Forms
+        - User
+        - Webform
+id: node.page.default
+targetEntityType: node
+bundle: page
+mode: default
+content:
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+  workflow_buttons:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_hero_image: true
+  field_summary: true
+  layout_builder__layout: true
+  search_api_excerpt: true

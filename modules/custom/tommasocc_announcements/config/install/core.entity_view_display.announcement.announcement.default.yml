@@ -1,0 +1,58 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.announcement.announcement.field_announcement_body
+    - field.field.announcement.announcement.field_announcement_links
+    - field.field.announcement.announcement.field_link_to_announcement_page
+  module:
+    - link
+    - text
+    - tommasocc_announcements
+id: announcement.announcement.default
+targetEntityType: announcement
+bundle: announcement
+mode: default
+content:
+  field_announcement_body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_announcement_links:
+    type: link_separate
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_link_to_announcement_page:
+    type: boolean
+    label: hidden
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  label:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  created: true
+  search_api_excerpt: true
+  status: true
+  uid: true

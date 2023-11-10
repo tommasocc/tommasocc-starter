@@ -1,0 +1,6 @@
+*.sql
+*.gz
+*.zip
+.htaccess
+.DS_Store
+*.env

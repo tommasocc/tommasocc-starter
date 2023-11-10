@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - tommasocc_announcements
+id: announcement.full
+label: 'Full content'
+targetEntityType: announcement
+cache: true

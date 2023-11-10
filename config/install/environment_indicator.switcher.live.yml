@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies: {  }
+machine: live
+description: null
+name: Live
+weight: '1'
+url: 'https://tommasocc-starter.tommaso.cc'
+fg_color: '#ffffff'
+bg_color: '#4f3c5b'

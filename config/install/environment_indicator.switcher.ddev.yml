@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies: {  }
+machine: ddev
+description: null
+name: DDEV
+weight: '0'
+url: 'https://tommasocc-starter.ddev.site'
+fg_color: '#ededed'
+bg_color: '#027ba7'

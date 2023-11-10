@@ -1,0 +1,22 @@
+entity.announcement.settings:
+  title: 'Settings'
+  route_name: entity.announcement.settings
+  base_route: entity.announcement.settings
+entity.announcement.view:
+  title: 'View'
+  route_name: entity.announcement.canonical
+  base_route: entity.announcement.canonical
+entity.announcement.edit_form:
+  title: 'Edit'
+  route_name: entity.announcement.edit_form
+  base_route: entity.announcement.canonical
+entity.announcement.delete_form:
+  title: 'Delete'
+  route_name: entity.announcement.delete_form
+  base_route: entity.announcement.canonical
+  weight: 10
+view.announcements.overview:
+  title: 'Announcements'
+  route_name: view.announcements.overview
+  base_route: system.admin_content
+  weight: 10

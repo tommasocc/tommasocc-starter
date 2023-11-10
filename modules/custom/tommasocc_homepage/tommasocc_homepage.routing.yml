@@ -1,0 +1,7 @@
+entity.homepage.settings:
+  path: 'admin/structure/homepage'
+  defaults:
+    _form: '\Drupal\tommasocc_homepage\Form\HomepageSettingsForm'
+    _title: 'Homepage'
+  requirements:
+    _permission: 'administer homepage'

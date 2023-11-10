@@ -1,0 +1,7 @@
+entity.announcement.settings:
+  path: 'admin/structure/announcement'
+  defaults:
+    _form: '\Drupal\tommasocc_announcements\Form\AnnouncementSettingsForm'
+    _title: 'Announcement'
+  requirements:
+    _permission: 'administer announcement'

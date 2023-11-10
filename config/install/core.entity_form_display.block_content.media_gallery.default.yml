@@ -1,0 +1,54 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.media_gallery
+    - field.field.block_content.media_gallery.field_caption
+    - field.field.block_content.media_gallery.field_gallery_heading
+    - field.field.block_content.media_gallery.field_media_items
+  module:
+    - inline_entity_form
+    - text
+id: block_content.media_gallery.default
+targetEntityType: block_content
+bundle: media_gallery
+mode: default
+content:
+  field_caption:
+    type: text_textarea
+    weight: 3
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_gallery_heading:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_media_items:
+    type: inline_entity_form_simple
+    weight: 2
+    region: content
+    settings:
+      form_mode: default
+      override_labels: false
+      label_singular: ''
+      label_plural: ''
+      collapsible: false
+      collapsed: false
+      revision: false
+    third_party_settings: {  }
+  info:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

@@ -1,0 +1,56 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.accordion
+    - field.field.block_content.accordion.body
+    - field.field.block_content.accordion.field_accordion_buttons
+    - field.field.block_content.accordion.field_accordion_label
+  module:
+    - inline_entity_form
+    - text
+id: block_content.accordion.default
+targetEntityType: block_content
+bundle: accordion
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 2
+    region: content
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+  field_accordion_buttons:
+    type: inline_entity_form_simple
+    weight: 26
+    region: content
+    settings:
+      form_mode: default
+      override_labels: false
+      label_singular: ''
+      label_plural: ''
+      collapsible: false
+      collapsed: false
+      revision: false
+    third_party_settings: {  }
+  field_accordion_label:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  info:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

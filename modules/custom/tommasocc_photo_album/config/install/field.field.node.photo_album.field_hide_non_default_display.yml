@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_hide_non_default_display
+    - node.type.photo_album
+id: node.photo_album.field_hide_non_default_display
+field_name: field_hide_non_default_display
+entity_type: node
+bundle: photo_album
+label: 'Hide Non-Default Display?'
+description: 'Select this to hide the opposite display mode when viewing a Photo Album.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

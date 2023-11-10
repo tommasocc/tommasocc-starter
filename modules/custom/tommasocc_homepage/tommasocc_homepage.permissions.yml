@@ -1,0 +1,3 @@
+administer homepage:
+  title: 'Administer homepage settings'
+  restrict access: true

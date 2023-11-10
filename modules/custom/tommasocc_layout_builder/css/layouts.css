@@ -1,0 +1,34 @@
+.layout-builder__layout.layout--33-67,
+.layout-builder__layout.layout--67-33 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+
+  .layout__region {
+    flex-grow: 1;
+    flex-shrink: 1;
+    width: 100%;
+  }
+}
+
+.layout-builder__layout.layout--33-67 {
+  .layout__region--column-1 {
+    flex-basis: 33%;
+    min-width: 220px;
+  }
+
+  .layout__region--column-2 {
+    flex-basis: 67%;
+  }
+}
+
+.layout-builder__layout.layout--67-33 {
+  .layout__region--column-1 {
+    flex-basis: 67%;
+  }
+
+  .layout__region--column-2 {
+    flex-basis: 33%;
+    min-width: 220px;
+  }
+}

@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.media_gallery
+    - field.storage.block_content.field_gallery_heading
+id: block_content.media_gallery.field_gallery_heading
+field_name: field_gallery_heading
+entity_type: block_content
+bundle: media_gallery
+label: 'Gallery Heading'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

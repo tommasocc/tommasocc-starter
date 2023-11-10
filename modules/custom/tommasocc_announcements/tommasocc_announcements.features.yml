@@ -1,0 +1,12 @@
+bundle: tommasocc
+required:
+  - core.entity_form_display.announcement.announcement.default
+  - core.entity_view_display.announcement.announcement.default
+  - field.field.announcement.announcement.field_announcement_body
+  - field.field.announcement.announcement.field_announcement_links
+  - field.field.announcement.announcement.field_link_to_announcement_page
+  - field.storage.announcement.field_announcement_body
+  - field.storage.announcement.field_announcement_links
+  - field.storage.announcement.field_link_to_announcement_page
+  - core.entity_view_mode.announcement.full
+  - core.entity_view_mode.announcement.search_result

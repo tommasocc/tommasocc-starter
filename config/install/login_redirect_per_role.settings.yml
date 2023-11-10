@@ -1,0 +1,26 @@
+login:
+  authenticated:
+    redirect_url: /admin/content
+    allow_destination: false
+    weight: 0
+  content_editor:
+    redirect_url: /admin/content
+    allow_destination: false
+    weight: 0
+  administrator:
+    redirect_url: /admin/content
+    allow_destination: false
+    weight: 0
+logout:
+  authenticated:
+    redirect_url: /
+    allow_destination: false
+    weight: 0
+  content_editor:
+    redirect_url: /
+    allow_destination: false
+    weight: 0
+  administrator:
+    redirect_url: /
+    allow_destination: false
+    weight: 0

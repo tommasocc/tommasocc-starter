@@ -1,0 +1,15 @@
+entity.homepage.settings:
+  title: 'Homepage'
+  description: 'Configure the Homepage entity type.'
+  route_name:  entity.homepage.settings
+  parent: system.admin_structure
+homepage:
+  title: 'Home'
+  url: 'internal:/'
+  weight: -99
+  parent: system.admin_content
+homepage.layout:
+  title: 'Edit Homepage Layout'
+  description: 'Edit the layout of the Homepage.'
+  url: 'internal:/home/1/layout'
+  parent: homepage

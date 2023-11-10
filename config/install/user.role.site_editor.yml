@@ -1,0 +1,19 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.accordion
+    - block_content.type.button
+    - block_content.type.button_group
+    - block_content.type.checkerboard
+    - block_content.type.media
+    - block_content.type.media_carousel
+    - block_content.type.media_gallery
+    - block_content.type.text
+  module:
+    - block_content
+    - layout_builder
+id: site_editor
+label: 'Site Editor'
+weight: 2
+is_admin: null

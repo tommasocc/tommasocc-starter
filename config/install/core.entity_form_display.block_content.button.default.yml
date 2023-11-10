@@ -1,0 +1,46 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.button
+    - field.field.block_content.button.field_button_icon
+    - field.field.block_content.button.field_button_icon_position
+    - field.field.block_content.button.field_button_url
+  module:
+    - link
+    - media_library
+id: block_content.button.default
+targetEntityType: block_content
+bundle: button
+mode: default
+content:
+  field_button_icon:
+    type: media_library_widget
+    weight: 3
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  field_button_icon_position:
+    type: options_select
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_button_url:
+    type: link_default
+    weight: 1
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  info:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

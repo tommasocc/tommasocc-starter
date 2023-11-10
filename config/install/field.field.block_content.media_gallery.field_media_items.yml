@@ -1,0 +1,28 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.media
+    - block_content.type.media_gallery
+    - field.storage.block_content.field_media_items
+id: block_content.media_gallery.field_media_items
+field_name: field_media_items
+entity_type: block_content
+bundle: media_gallery
+label: 'Media Items'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:block_content'
+  handler_settings:
+    target_bundles:
+      media: media
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

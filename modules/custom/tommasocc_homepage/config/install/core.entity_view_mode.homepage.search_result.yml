@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - tommasocc_homepage
+id: homepage.search_result
+label: 'Search result highlighting input'
+targetEntityType: homepage
+cache: true

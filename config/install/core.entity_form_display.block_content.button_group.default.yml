@@ -1,0 +1,35 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.button_group
+    - field.field.block_content.button_group.field_buttons
+  module:
+    - inline_entity_form
+id: block_content.button_group.default
+targetEntityType: block_content
+bundle: button_group
+mode: default
+content:
+  field_buttons:
+    type: inline_entity_form_simple
+    weight: 27
+    region: content
+    settings:
+      form_mode: default
+      override_labels: true
+      label_singular: Button
+      label_plural: Buttons
+      collapsible: true
+      collapsed: false
+      revision: false
+    third_party_settings: {  }
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

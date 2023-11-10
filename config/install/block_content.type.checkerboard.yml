@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: checkerboard
+label: Checkerboard
+revision: 0
+description: ''

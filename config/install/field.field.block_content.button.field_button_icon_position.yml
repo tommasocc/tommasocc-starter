@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.button
+    - field.storage.block_content.field_button_icon_position
+  module:
+    - options
+id: block_content.button.field_button_icon_position
+field_name: field_button_icon_position
+entity_type: block_content
+bundle: button
+label: 'Button Icon Position'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

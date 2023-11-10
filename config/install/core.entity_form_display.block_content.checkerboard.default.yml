@@ -1,0 +1,41 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.checkerboard
+    - field.field.block_content.checkerboard.field_columns
+    - field.field.block_content.checkerboard.field_content
+  module:
+    - inline_entity_form
+id: block_content.checkerboard.default
+targetEntityType: block_content
+bundle: checkerboard
+mode: default
+content:
+  field_columns:
+    type: number
+    weight: 0
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_content:
+    type: inline_entity_form_complex
+    weight: 1
+    region: content
+    settings:
+      form_mode: default
+      override_labels: false
+      label_singular: ''
+      label_plural: ''
+      allow_new: true
+      allow_existing: false
+      match_operator: CONTAINS
+      allow_duplicate: false
+      collapsible: false
+      collapsed: false
+      revision: false
+      removed_reference: delete
+    third_party_settings: {  }
+hidden:
+  info: true
